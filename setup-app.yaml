@@ -7,3 +7,7 @@
       src: ./index.php #current directory  
       dest: /var/www/html #f* destination
       mode: 0755 #permissions 
+  - name: configure php.ini file 
+    lineinfile: 
+      path: /etc/php.ini 
+      regexp: ^short_open_tag 
