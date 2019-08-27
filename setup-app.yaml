@@ -24,8 +24,8 @@
     command: ls -alt {{ path_to_app }}
     register: dir_contents  #stores all content of the above command ran  
 
-  - name: Debug directory contents (to see the content of dir_contents)
-    degug:
+  - name: Debug directory contents 
+    debug: #(to see the content of dir_contents)
       msg: "{{ dir_contents }}"
 
 
