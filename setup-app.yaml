@@ -4,10 +4,7 @@
 
   vars:
     path_to_app: "/var/www/html"
-
-
-
-
+    
   tasks:
   - name: upload app file / copy from local to remote  
     copy: #nice module to know 
