@@ -1,0 +1,8 @@
+---
+- hosts: webserves
+  tasks:
+  - name: upload app file / copy from local to remote  
+    copy: 
+      src: ../index.php 
+      dest: /var/www/html
+      mode: 0755 #permissions 
