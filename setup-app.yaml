@@ -12,7 +12,7 @@
   - name: upload app file / copy from local to remote  
     copy: #nice module to know 
       src: ./index.php #current directory  
-      dest: {{path_to_app}}      #/var/www/html #f* destination
+      dest: "{{path_to_app}}"      #/var/www/html #f* destination
       mode: 0755 #permissions 
   
   - name: create simple info page
