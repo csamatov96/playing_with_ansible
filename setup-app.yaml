@@ -1,9 +1,9 @@
 ---
-- hosts: webservers
-  become: true 
+- hosts: webservers #target
+  become: true  #privileges
   tasks:
   - name: upload app file / copy from local to remote  
-    copy: 
-      src: ./index.php 
-      dest: /var/www/html
+    copy: #nice module to know 
+      src: ./index.php #current directory  
+      dest: /var/www/html #f* destination
       mode: 0755 #permissions 
