@@ -3,7 +3,7 @@
   become: true  #privileges
 
   vars:
-    path_to_app: "var/www/html/"
+    path_to_app: "/var/www/html"
 
 
 
