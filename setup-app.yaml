@@ -12,6 +12,8 @@
       path: /etc/php.ini 
       regexp: ^short_open_tag 
       line: 'short_open_tag=On'
-
+    notify: restart apache 
+  
+    handlers: 
   - name: restart apache #to make changes to take place, after editing the above stuff
     service: name=httpd state=restarted
