@@ -4,7 +4,7 @@
   tasks:
   - name: creating template 
     template: 
-      src: ../config/lb-config.j2
+      src: ./config/lb-config.j2
       dest: /etc/httpd/conf.d/lb.conf
       owner: bin
       group: wheel
