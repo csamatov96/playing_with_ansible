@@ -4,3 +4,6 @@
   tasks:
     - name: check status of Apache
       command: service httpd status 
+      #args:
+      #  warn: no
+      #changed_when: false 
