@@ -6,4 +6,8 @@
       command: service httpd status 
       args:
         warn: no
-      changed_when: false 
+      changed_when: false #so it'll not display: changed massage 
+    
+    - name: This is not fail
+      command: /bin/false
+      ignore_errors: yes
