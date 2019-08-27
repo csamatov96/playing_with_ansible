@@ -8,6 +8,6 @@
         warn: no
       changed_when: false #so it'll not display: changed massage 
     
-    - name: This is not fail
+    - name: This is not fail #continue proceeding 
       command: /bin/false
-      ignore_errors: yes
+      ignore_errors: yes 
