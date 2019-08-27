@@ -1,5 +1,6 @@
 ---
 - hosts: webservers
+  become: true 
   tasks:
   - name: upload app file / copy from local to remote  
     copy: 
