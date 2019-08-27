@@ -1,16 +1,23 @@
 ---
 - hosts: webservers #target
   become: true  #privileges
+
+  vars:
+    path_to_app = "var/www/html/"
+
+
+
+
   tasks:
   - name: upload app file / copy from local to remote  
     copy: #nice module to know 
       src: ./index.php #current directory  
-      dest: /var/www/html #f* destination
+      dest: {{path_to_app}}      #/var/www/html #f* destination
       mode: 0755 #permissions 
   
   - name: create simple info page
     copy:
-      dest: /var/www/html/info.php
+      dest: "{{path_to_app}}/info.php"
       content: "<h1> Info abour my webserver {{ansible_hostname}} </h1>"
 
 
