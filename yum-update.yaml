@@ -1,5 +1,6 @@
 ---
    - hosts: webservers:loadbalancer
+     become: true #sudo privileges in action
      tasks:
      - name: Updating yum packages
        yum: name=* state=latest 
