@@ -1,4 +1,5 @@
 ---
 - hosts: webservers #target
   become: true  #privileges
-  roles: webservers 
+  roles:
+    - webservers 
