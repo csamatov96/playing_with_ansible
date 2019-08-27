@@ -7,6 +7,13 @@
       src: ./index.php #current directory  
       dest: /var/www/html #f* destination
       mode: 0755 #permissions 
+  
+  - name: create simple info page
+    copy:
+      dest: /var/www/html/info.php
+      content: "<h1> Info abour my webserver {{ansible_hostname}} </h1>"
+
+
   - name: configure php.ini file 
     lineinfile: 
       path: /etc/php.ini 
